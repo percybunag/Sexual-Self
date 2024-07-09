@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Self | Sexual Self</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .dropdown-item {
+    font-weight: 700;
+    color: #86469C;
+  }
+  .nav-link {
+    font-weight: 700;
+    color: #86469C;
+  }
+  .navbar {
+    margin-top: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    
+  }
+  .navbar {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.2s, color 0.3s;
+  }
+
+  .navbar-transparent {
+      background-color: transparent;
+  }
+
+  .navbar-scrolled {
+      background-color: white !important;
+      color: #751097 !important;
+  }
+
+  .navbar-scrolled .nav-link {
+      color: #751097!important;
+  }
+
+  .nav-link:hover {
+      color: #FB9AD1 !important;
+  }
+
+  .navbar-scrolled .nav-link:hover {
+      color: #FB9AD1!important;
+  }
+  .about-paragraph {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+  .about-header {
+    font-weight: 700;
+    color: white;
+  }
+  
+  #cover {
+    background-color: rgba(70, 1, 41, 0.8); /* Adjust the color and opacity as needed */
+    background-image: url(img/try.jpg);
+    background-blend-mode: overlay; /* Ensures the shade blends with the background image */
+    background-position: no-repeat;
+    background-size: cover;
+  }
+  .goal-header {
+    font-weight: 700;
+    color: #751097;
+    font-size: 50px;
+  }
+  .goal-paragraph {
+    font-weight: 700;
+    color: #86469C;
+    font-size: 20px;
+  }
+  .features-header {
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .features-paragraph {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .header {
+    background-color: #FB9AD1;
+    color: white;
+  }
+  .card {
+    border-radius: 30px;
+    border: none;
+    background-color: #E0F8B8;
+    /* Animation */
+    animation: fadeInAnimation 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /* Hover effect */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .card:hover {
+    background-color: #C6F9CC; /* Adjust the hover background color as needed */
+    transform: scale(1.05); /* Adjust the scale factor for hover effect */
+  }
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .card-title {
+    font-weight: 900;
+    color: #74019B;
+  }
+  .card-title-2 {
+    font-weight: 800;
+    color: #74019B;
+  }
+  .card-text {
+    font-weight: 700;
+    color: #74019B;
+  }
+  #goal {
+    background-color: rgb(118, 1, 157);
+  }
+  #importance {
+    background: linear-gradient(rgba(117, 1, 157, 0.6), rgba(117, 1, 157, 0.6)),
+                url(img/jian.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  .importance-header{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .importance-paragraph{
+    font-size: 20px;
+    color: white;
+  }
+  .health-header{
+    color: #74019B;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .health-paragraph{
+    font-size: 20px;
+    color: #74019B;
+  }
+/* Footer Styles */
+.footer {
+    background-color: #FB9AD1;
+    color: #74019B;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .footer h5{
+    font-weight: bold;
+  }
+
+  .footer h5, .footer h6, .footer p, .footer a {
+    margin-bottom: 10px;
+    
+}
+
+.footer a {
+    color: #74019B;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-links {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer a ion-icon {
+    margin-top: 15px;
+    font-size: 24px;
+    margin-inline-start: 10px;
+}
+
+
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" width="150px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!-- Dropdown Menu: Learn More -->
+          <li class="nav-item dropdown mx-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLearnMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownLearnMore">
+              <li><a class="dropdown-item" href="SafeSexPractices.html">Safe Sex Practices</a></li>
+              <li><a class="dropdown-item" href="CommonSex.html">Primary Sex Characteristics</a></li>
+              <li><a class="dropdown-item" href="#importance">Consent and Healthy Relationships</a></li>
+              <li><a class="dropdown-item" href="CommunicationTips.html">Communication Tips for Relationships</a></li>
+              <!-- Add more dropdown items as needed -->
+            </ul>
+          </li>
+          <!-- End Dropdown Menu: Learn More -->
+          <!-- Dropdown Menu: Risk Factors -->
+          <li class="nav-item dropdown mx-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRiskFactors" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Risk Factors
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownRiskFactors">
+              <li><a class="dropdown-item" href="riskfactors.html">Disease</a></li>
+              <!-- Add more dropdown items for risk factors -->
+            </ul>
+          </li>
+          <!-- End Dropdown Menu: Risk Factors -->
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="#references">References</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    
+    <!-- Home (Cover) Section -->
+    <section id="cover" class="py-5 text-center">
+      <div class="container my-5 py-5">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-lg-12 text-center py-5 my-5">
+            <h1 class="about-header text-center">Welcome to Sexual Self</h1>
+            <p class="about-paragraph text-center">Sexual Self is a Human Sexuality such as diversity of sexual behaviour, understanding the human sexual response, identifying sexual orientations and differentiating love from lust. Human Sexuality is influenced by physical, psychological, spiritual, and cultural factor. As sexual beings, people are identified by gender, role, assignment, and perception.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Goal Section -->
+    <section id="goal" class="text center bg-light">
+      <div class="label-bar">
+        <svg width="100%" height="100%" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="5%" stop-color="#9900ef"></stop>
+              <stop offset="95%" stop-color="#f78da7"></stop>
+            </linearGradient>
+          </defs>
+          <path d="M 0,200 
+                   C 120,60 240,60 360,100 
+                   C 480,140 600,140 720,100 
+                   C 840,60 960,60 1080,100 
+                   C 1200,140 1320,140 1440,100 
+                   L 1440,200 
+                   L 0,200 
+                   Z" 
+                stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150 path-0"
+                transform="rotate(180 720 100)">
+          </path>
+        </svg>
+      </div>
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <img src="img/goalimage.png" width="80%">
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-6 text-center">
+              <h1 class="goal-header mb-3">The Goal:</h1>
+              <hr>
+              <p class="goal-paragraph">The goal is to empower readers by providing comprehensive, insightful, and accessible information that helps them understand, explore, and embrace their sexual self. We aim to create a safe and inclusive space where individuals can learn, grow, and feel confident in their journey towards sexual self-awareness and well-being.</p>
+            </div>
+          </div>
+      </div>
+      <div class="label-bar">
+        <svg width="100%" height="100%" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="5%" stop-color="#9900ef"></stop>
+              <stop offset="95%" stop-color="#f78da7"></stop>
+            </linearGradient>
+          </defs>
+          <path d="M 0,200 
+                   C 120,60 240,60 360,100 
+                   C 480,140 600,140 720,100 
+                   C 840,60 960,60 1080,100 
+                   C 1200,140 1320,140 1440,100 
+                   L 1440,200 
+                   L 0,200 
+                   Z" 
+                stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150 path-0">
+          </path>
+        </svg>
+      </div>
+    </section>
+    
+    <!-- Our Features Section -->
+    <section id="features" class="bg-light pb-5">
+      <div class="header py-5">
+        <h1 class="features-header text-center mb-2">Sexual Self Features</h1>
+        <p class="features-paragraph text-center mb-2 px-5">Discover the key features that make Sexual Self a valuable resource for college students. From educational content to confidential support, we offer a range of services to cater to your needs.</p>
+      </div>
+      <div class="container pt-3">
+        <div class="row pt-5 mt-5 gx-4">
+          <!-- Feature Card 1 -->
+          <div class="col-lg-4 mb-4">
+            <div class="card fade"> <!-- Added 'fade' class here -->
+              <div class="card-body">
+                <h2 class="card-title text-center mx-5">1</h2>
+                <h5 class="card-title-2 text-center mb-3">Educational Resources</h5>
+                <p class="card-text text-center mb-5 mx-3">Access informative articles, videos, and guides on various aspects of sexual health and relationships.</p>
+                <img src="img/educational1.png" class="mx-auto d-block" alt="Educational Resources Image">
+              </div>
+            </div>
+          </div>
+          <!-- Feature Card 2 -->
+          <div class="col-lg-4 mb-4">
+            <div class="card fade"> <!-- Added 'fade' class here -->
+              <div class="card-body">
+                <h2 class="card-title text-center mx-5">2</h2>
+                <h5 class="card-title-2 text-center mb-3">Confidential Support</h5>
+                <p class="card-text text-center mb-5 mx-3">Connect with trained professionals for confidential support and guidance on sensitive sexual health issues.</p>
+                <img src="img/educational2.png" class="mx-auto d-block" width="90%" alt="Confidential Support Image">
+              </div>
+            </div>
+          </div>
+          <!-- Feature Card 3 -->
+          <div class="col-lg-4 mb-4">
+            <div class="card fade"> <!-- Added 'fade' class here -->
+              <div class="card-body">
+                <h2 class="card-title text-center mx-5">3</h2>
+                <h5 class="card-title-2 text-center mb-3">Community Engagement</h5>
+                <p class="card-text text-center mb-2">Engage with a supportive community through forums, events, and discussions on sexual wellness topics.</p>
+                <img src="img/educational3.png" class="mx-auto d-block mb-5" width="95%" alt="Community Engagement Image">
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Importance of Knowledge Section -->
+    <section id="importance" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <h2 class="importance-header mb-3">Importance of Knowledge in Sexual Self</h2>
+            <p class="importance-paragraph mt-3">Sexual identity and orientation are fundamental components, involving an individual's self-perception and attraction patterns, which are crucial for self-acceptance and mental well-being. Recognizing one's sexual orientation helps in navigating personal relationships and societal interactions effectively, as discussed by the American Psychological Association (APA).</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <img src="img/importance.png" class="img-fluid" width="Importance Image">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sexual Health And Well Being Section -->
+    <section id="health" class="py-5">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 col-lg-6 mb-5">
+            <img src="img/sexualhealth.png" alt="Sexual Health Image" width=97% class="">
+          </div>
+          <div class="col-md-6 col-lg-6 text-center">
+            <h2 class="health-header">
+              Sexual Health And Well Being
+            </h2>
+            <p class="health-paragraph">
+              Promoting sexual health includes access to accurate information about reproductive health, contraception, sexually transmitted infections (STIs), and safe sexual practices. Additionally, fostering open communication, consent, and mutual respect in relationships are essential aspects of maintaining sexual well-being. Embracing diversity in sexual orientations and identities further promotes inclusivity and supports individuals in achieving healthy sexual lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Footer Section -->    
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-lg-4 text-start">
+            <img src="img/logo2.png" width= 60% >
+          </div>
+            <div class="col-md-4 col-sm-4 text-center text-md-start">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#cover">Home</a></li>
+                    <li><a href="#homosexual">Homosexual</a></li>
+                    <li><a href="#Heteosexual">Heteosexual</a></li>
+                    <li><a href="#Bisexual">Bisexual</a></li>
+                    <li><a href="#Transgender">Transgender</a></li>
+                    <li><a href="#Pansexual">Pansexual</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center text-md-start">
+                <h5>Follow Us</h5>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#https://www.youtube.com/"><ion-icon name="logo-youtube"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- javascript -->
+<script>
+  window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+          navbar.classList.add('navbar-scrolled');
+      } else {
+          navbar.classList.remove('navbar-scrolled');
+      }
+  });
+</script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

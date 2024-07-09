@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Self | Sexual Self</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="png" href="img/logo.png">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  #cover {
+    background-color: #86469C; /* Adjust the color and opacity as needed */
+    background-blend-mode: overlay; /* Ensures the shade blends with the background image */
+    background-position: no-repeat;
+    background-size: cover;
+  }
+  .dropdown-item {
+    font-weight: 700;
+    color: #86469C;
+  }
+  .nav-link {
+    font-weight: 700;
+    color: #86469C;
+  }
+  .navbar {
+    margin-top: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    
+  }
+  .navbar {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.2s, color 0.3s;
+  }
+
+  .navbar-transparent {
+      background-color: transparent;
+  }
+
+  .navbar-scrolled {
+      background-color: white !important;
+      color: #751097 !important;
+  }
+
+  .navbar-scrolled .nav-link {
+      color: #751097!important;
+  }
+
+  .nav-link:hover {
+      color: #FB9AD1 !important;
+  }
+
+  .navbar-scrolled .nav-link:hover {
+      color: #FB9AD1!important;
+  }
+
+  .about-paragraph {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 140px;
+    color: white;
+    
+  }
+
+  .about-header {
+    font-weight: 700;
+    font-size: 55px;
+    margin: 30px;
+    margin-top: 130px;
+    margin-bottom: 100px;
+    color: white;
+    align-items: center;
+  }
+  
+  .goal-header {
+    font-weight: 700;
+    color: #751097;
+    font-size: 45px;
+    padding-top: 30px;
+  }
+  .goal-paragraph {
+    font-weight: 700;
+    color: #86469C;
+    font-size: 20px;
+  }
+  .text-header{
+    font-weight: 700;
+    color: white;
+    font-size: 45px;
+    padding-top: 150px;
+  }
+
+  .text-paragraph{
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .text2-header{
+    font-weight: 700;
+    color: #86469C;
+    font-size: 45px;
+    padding-top: 150px;
+  }
+
+  .text2-paragraph{
+    font-weight: 700;
+    color: #86469C;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  
+  .features-header {
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .features-paragraph {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .header {
+    background-color: #FB9AD1;
+    color: white;
+  }
+  .card {
+    border-radius: 30px;
+    border: none;
+    background-color: #E0F8B8;
+    /* Animation */
+    animation: fadeInAnimation 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /* Hover effect */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .card:hover {
+    background-color: #C6F9CC; /* Adjust the hover background color as needed */
+    transform: scale(1.05); /* Adjust the scale factor for hover effect */
+  }
+  
+  .card-title {
+    font-weight: 900;
+    color: #74019B;
+  }
+  .card-title-2 {
+    font-weight: 800;
+    color: #74019B;
+  }
+  .card-text {
+    font-weight: 700;
+    color: #74019B;
+  }
+  #homosexual {
+    display: flex;
+  }
+  #Heteosexual{
+    background-color: #86469C;
+  }
+  #Bisexual{
+    display: flex;
+  }
+  #Transgender{
+    background-color: #86469C;
+  }
+
+  .importance-header{
+    color: #74019B;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  .importance-paragraph{
+    font-size: 20px;
+    color: #74019B;
+  }
+
+  .footer {
+    background-color: #FB9AD1;
+    color: #74019B;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .footer h5{
+    font-weight: bold;
+  }
+
+  .footer h5, .footer h6, .footer p, .footer a {
+    margin-bottom: 10px;
+    
+}
+
+.footer a {
+    color: #74019B;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-links {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer a ion-icon {
+    margin-top: 15px;
+    font-size: 24px;
+    margin-inline-start: 10px;
+}
+
+@media (max-width: 768px) {
+    #cover {
+      text-align: start;
+      justify-content: start;
+    }
+    #cover {
+        font-size: 16px;
+        text-align: start;
+        justify-content: start;
+    }
+  
+}
+
+
+</style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" width="150px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!-- Dropdown Menu: Learn More -->
+          <li class="nav-item dropdown mx-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLearnMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Learn More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownLearnMore">
+              <li><a class="dropdown-item" href="SafeSexPractices.html">Safe Sex Practices</a></li>
+              <li><a class="dropdown-item" href="CommonSex.html">Primary Sex Characteristics</a></li>
+              <li><a class="dropdown-item" href="#importance">Consent and Healthy Relationships</a></li>
+              <li><a class="dropdown-item" href="CommunicationTips.html">Communication Tips for Relationships</a></li>
+              <!-- Add more dropdown items as needed -->
+            </ul>
+          </li>
+          <!-- End Dropdown Menu: Learn More -->
+          <!-- Dropdown Menu: Risk Factors -->
+          <li class="nav-item dropdown mx-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRiskFactors" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Risk Factors
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownRiskFactors">
+              <li><a class="dropdown-item" href="riskfactors.html">Disease</a></li>
+              <!-- Add more dropdown items for risk factors -->
+            </ul>
+          </li>
+          <!-- End Dropdown Menu: Risk Factors -->
+          <li class="nav-item mx-4">
+            <a class="nav-link" href="#references">References</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    
+<!-- Home (Cover) Section -->
+    <section id="cover" class="py-3 text-center">
+      <div class="container my-5 py-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-lg-6 text-end">
+                <h1 class="about-header text-end">Risk Factors</h1>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-6 text-start">
+                <p class="about-paragraph text-start">Engaging in sexual activity involves various risks, including sexually transmitted infections (STIs), unintended pregnancies, and emotional and psychological impacts. Understanding these risks is essential for making informed decisions and taking precautions to ensure a healthy and responsible approach to sexual relationships.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+<!-- HIV/AIDS Section -->
+     <section id="homosexual" class="py-2 text-center">
+        <div class="container my-2 py-2">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-lg-6 text-start">
+                <h4 class="goal-header mb-3">HIV/AIDS</h4><br>
+                    <p class="goal-paragraph">Human immunodeficiency virus, or HIV, is a virus that targets immune-supporting cells in the body, increasing susceptibility to subsequent infections and illnesses. HIV can be transmitted by intercourse with an infected person, sharing injecting equipment, or unprotected sex (sex without the use of a condom or HIV medication to prevent or treat HIV).</p><br>
+                    
+              </div>
+              <div class="col-md-6 col-sm-6 col-lg-6 text-end">
+                <img src="img/hiv.png" width= 80%>
+              </div>
+            </div>
+        </div>
+     </section>
+
+<!-- Footer Section -->    
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-lg-6 text-start">
+              <img src="img/logo2.png" width= 80% >
+            </div>
+              <div class="col-md-3 col-sm-6 text-center text-md-start">
+                  <h5>Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#cover">Home</a></li>
+                      <li><a href="#homosexual">Homosexual</a></li>
+                      <li><a href="#Heteosexual">Heteosexual</a></li>
+                      <li><a href="#Bisexual">Bisexual</a></li>
+                      <li><a href="#Transgender">Transgender</a></li>
+                      <li><a href="#Pansexual">Pansexual</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-2 col-sm-6 text-center text-md-center">
+                  <h5>Follow Us</h5>
+                  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                  <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                  <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                  <a href="#https://www.youtube.com/"><ion-icon name="logo-youtube"></ion-icon></a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+<!-- javascript -->
+  <script>
+      window.addEventListener('scroll', function() {
+          var navbar = document.querySelector('.navbar');
+          if (window.scrollY > 100) {
+              navbar.classList.add('navbar-scrolled');
+          } else {
+              navbar.classList.remove('navbar-scrolled');
+          }
+      });
+  </script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
